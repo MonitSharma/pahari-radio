@@ -1,0 +1,102 @@
+@import 'tailwindcss';
+/* The @font-face rules live in public/fonts/fonts.css and are linked from
+   index.html — importing them here would land after Tailwind's own rules,
+   which is invalid, and would delay the font request behind the JS bundle. */
+
+@theme {
+  --font-display: 'Noto Serif Devanagari', ui-serif, Georgia, serif;
+  --font-sans:
+    'Noto Sans Devanagari', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+:root {
+  /* Set per station by <App>, so anything can tint itself without prop drilling. */
+  --accent: #ff9d5c;
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #0b0808;
+  color: #f5efe8;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  /* The scene is fixed and the sheet scrolls within itself; nothing should
+     rubber-band the page behind them. */
+  overscroll-behavior: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.safe-area-footer {
+  padding-bottom: calc(0.75rem + env(safe-area-inset-bottom));
+}
+
+@media (min-width: 640px) {
+  .safe-area-footer {
+    padding-bottom: calc(1.25rem + env(safe-area-inset-bottom));
+  }
+}
+
+/* The YouTube iframe is the audio source and must stay in the layout to keep
+   playing — hide it without display:none, which some browsers treat as a
+   reason to stop media. */
+.yt-sink {
+  position: fixed;
+  width: 1px;
+  height: 1px;
+  left: -100px;
+  top: -100px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.rise {
+  animation: rise 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+/* Equaliser bars in the now-playing card. */
+@keyframes bar {
+  0%,
+  100% {
+    transform: scaleY(0.25);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.eq-bar {
+  transform-origin: bottom;
+  animation: bar 900ms ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rise,
+  .eq-bar {
+    animation: none;
+  }
+  .eq-bar {
+    transform: scaleY(0.6);
+  }
+}

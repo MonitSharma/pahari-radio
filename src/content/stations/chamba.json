@@ -1,0 +1,169 @@
+{
+  "slug": "chamba",
+  "name": "चंबा–पांगी",
+  "roman": "Chamba–Pangi",
+  "tagline": "Gaddi, Churahi and Pangwali, from the far side of the passes.",
+  "epoch": 1704068340000,
+  "tracks": [
+    {
+      "id": "NoK2uvbX0Ng",
+      "title": "Pangi Churah 2.0",
+      "artist": "Poonam Bhardwaj",
+      "duration": 470,
+      "dialect": "Pangwali / Churahi",
+      "region": "Pangi and Churah valleys, Chamba",
+      "note": "Poonam Bhardwaj is the best-known voice from this corner of Himachal. Pangi sits beyond the Sach Pass and is cut off by snow for months a year, which is part of why its music sounds least like everything else in the state."
+    },
+    {
+      "id": "qetuAm_WQjc",
+      "title": "Zindadi",
+      "artist": "Poonam Bhardwaj",
+      "duration": 460,
+      "dialect": "Gaddi",
+      "region": "Bharmour, Chamba",
+      "note": "Gaddi song belongs to a shepherding people who move flocks between Kangra and the high Bharmour pastures — a seasonal migration that shows up constantly in the lyrics as departure and return.",
+      "glossary": [
+        {
+          "word": "ढोला",
+          "roman": "dhola",
+          "meaning": "beloved — the standard term of endearment in Kangri and Gaddi song"
+        }
+      ]
+    },
+    {
+      "id": "JyuS8jrgRI0",
+      "title": "Churahi Natti",
+      "artist": "Poonam Bhardwaj & RK Soni",
+      "duration": 479,
+      "dialect": "Churahi",
+      "region": "Churah valley, Chamba",
+      "occasion": "Nati",
+      "glossary": [
+        {
+          "word": "नाटी",
+          "roman": "nati",
+          "meaning": "Himachal's circular group dance, and the songs written for it"
+        }
+      ]
+    },
+    {
+      "id": "AfbNlGVXUtk",
+      "title": "O Dhola",
+      "artist": "Poonam Bhardwaj & Aman Bharmouri",
+      "duration": 235,
+      "dialect": "Gaddi",
+      "region": "Bharmour, Chamba",
+      "glossary": [
+        {
+          "word": "ढोला",
+          "roman": "dhola",
+          "meaning": "beloved — the standard term of endearment in Kangri and Gaddi song"
+        }
+      ]
+    },
+    {
+      "id": "RlltJJA5-Ds",
+      "title": "Chann Chadeya",
+      "artist": "Poonam Bhardwaj",
+      "duration": 291,
+      "dialect": "Gaddi",
+      "region": "Chamba"
+    },
+    {
+      "id": "t5rjnfhb588",
+      "title": "Gaddiyali Folk Naati",
+      "artist": "Poonam Bhardwaj",
+      "duration": 521,
+      "dialect": "Gaddi",
+      "region": "Bharmour, Chamba",
+      "occasion": "Nati"
+    },
+    {
+      "id": "dElCNixCuJw",
+      "title": "Gudak Chamak",
+      "artist": "Poonam Bhardwaj",
+      "duration": 283,
+      "dialect": "Chambyali",
+      "region": "Chamba"
+    },
+    {
+      "id": "G-mz0IG6_DI",
+      "title": "Hey Tulso",
+      "artist": "Poonam Bhardwaj",
+      "duration": 195,
+      "dialect": "Chambyali",
+      "region": "Chamba"
+    },
+    {
+      "id": "ilIEfAeglJI",
+      "title": "Pangi Beats",
+      "artist": "Poonam Bhardwaj",
+      "duration": 632,
+      "dialect": "Pangwali",
+      "region": "Pangi valley, Chamba"
+    },
+    {
+      "id": "2Fv0av0Ns2k",
+      "title": "Pangwali Folk Song",
+      "artist": "M K Chipna & Devi Singh",
+      "duration": 406,
+      "dialect": "Pangwali",
+      "region": "Pangi valley, Chamba",
+      "note": "Pangwali is spoken by a few thousand people in one valley. Recordings like this are a meaningful share of everything ever committed to tape in the language."
+    },
+    {
+      "id": "rFGa9uzGPyA",
+      "title": "Tero Mero Sath",
+      "artist": "Sunil Lugupa & Yogi Chauhan",
+      "duration": 400,
+      "dialect": "Pangwali",
+      "region": "Pangi valley, Chamba"
+    },
+    {
+      "id": "gCISW87bkbU",
+      "title": "Aaja Mere Saajna",
+      "artist": "Pangwali Chamba Folk",
+      "duration": 337,
+      "dialect": "Pangwali",
+      "region": "Pangi valley, Chamba",
+      "occasion": "Traditional"
+    },
+    {
+      "id": "ArlxtFRM4bE",
+      "title": "Nach Bala Bhotiryo",
+      "artist": "Pangwali Chamba Folk",
+      "duration": 359,
+      "dialect": "Pangwali",
+      "region": "Pangi valley, Chamba",
+      "occasion": "Traditional"
+    },
+    {
+      "id": "4VVQQQx8W4Q",
+      "title": "Piyoka Hilltown",
+      "artist": "Pangwali Chamba Folk",
+      "duration": 316,
+      "dialect": "Pangwali",
+      "region": "Pangi valley, Chamba",
+      "occasion": "Traditional"
+    },
+    {
+      "id": "jZmCMmF_Ot0",
+      "title": "Haira Logo Pangi Ree Shaan",
+      "artist": "Pangwali Chamba Folk",
+      "duration": 348,
+      "dialect": "Pangwali",
+      "region": "Pangi valley, Chamba",
+      "occasion": "Traditional"
+    },
+    {
+      "id": "v8Qa61XJ7yQ",
+      "title": "Sunni Bhunku",
+      "artist": "Onkar Thakur",
+      "duration": 445,
+      "dialect": "Gaddi",
+      "region": "Chamba / Kangra",
+      "occasion": "Shepherd song",
+      "note": "Explicitly a tribute to the shepherds. The Gaddi flock routes are emptying as the younger generation leaves them, and a fair amount of recent Gaddi music is elegy whether or not it says so."
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "slug": "devbhoomi",
+  "name": "देवभूमि",
+  "roman": "Devbhoomi",
+  "tagline": "For the deities. Harul, dev nati and the Mata bhajans.",
+  "epoch": 1704068760000,
+  "tracks": [
+    {
+      "id": "GoCCKWAzv7s",
+      "title": "Chatradhari",
+      "artist": "Harul — Chalda Mahasu",
+      "duration": 543,
+      "dialect": "Trans-Giri / Jaunsari",
+      "region": "Sirmaur and the Mahasu belt",
+      "occasion": "Harul",
+      "note": "Harul is the ballad form of the trans-Giri country, sung for Mahasu Devta. Chalda Mahasu is the \"moving\" one of the four Mahasu brothers, whose image travels between villages on a years-long circuit rather than staying in one temple.",
+      "glossary": [
+        {
+          "word": "हारुल",
+          "roman": "harul",
+          "meaning": "the long ballad form of the Mahasu belt"
+        },
+        {
+          "word": "छत्रधारी",
+          "roman": "chatradhari",
+          "meaning": "bearer of the canopy — an epithet for the deity"
+        },
+        {
+          "word": "देवता",
+          "roman": "devta",
+          "meaning": "the village deity, carried in a palanquin at fairs"
+        }
+      ]
+    },
+    {
+      "id": "ymqfjp_TOww",
+      "title": "Jai Jai Mahasu Deva",
+      "artist": "Ajay Chauhan",
+      "duration": 277,
+      "dialect": "Sirmauri",
+      "region": "Sirmaur",
+      "occasion": "Devotional",
+      "glossary": [
+        {
+          "word": "देवता",
+          "roman": "devta",
+          "meaning": "the village deity, carried in a palanquin at fairs"
+        },
+        {
+          "word": "जातर",
+          "roman": "jatar",
+          "meaning": "a village fair held in a deity’s honour"
+        }
+      ]
+    },
+    {
+      "id": "bxzYwDay_UU",
+      "title": "Jai Deva Mahasu Chalda",
+      "artist": "Bahadur Singh Rana",
+      "duration": 419,
+      "dialect": "Sirmauri / Jaunsari",
+      "region": "Mahasu belt",
+      "occasion": "Devotional"
+    },
+    {
+      "id": "ubA2IQh0igg",
+      "title": "Mahasu Devta Harul 2",
+      "artist": "Mukesh Kohli & Kavita Rawat",
+      "duration": 397,
+      "dialect": "Jaunsari",
+      "region": "Mahasu belt",
+      "occasion": "Harul"
+    },
+    {
+      "id": "yLwdiZ4aMzA",
+      "title": "Kangde Da Tilla O Mata",
+      "artist": "Karnail Rana",
+      "duration": 661,
+      "dialect": "Kangri",
+      "region": "Kangra",
+      "occasion": "Mata bhajan",
+      "note": "The single most-recorded devotional song in lower Himachal — the \"hill of Kangra\" is the shrine at Brajeshwari, and near enough every Kangri singer has cut a version.",
+      "glossary": [
+        {
+          "word": "टीला",
+          "roman": "tila",
+          "meaning": "hill or mound; here, the temple hill at Kangra"
+        }
+      ]
+    },
+    {
+      "id": "MEB2WRDfan8",
+      "title": "Kangre Da Teela O Mata",
+      "artist": "Sumna Himachali",
+      "duration": 285,
+      "dialect": "Kangri",
+      "region": "Kangra",
+      "occasion": "Mata bhajan",
+      "note": "A second reading of the same song, a generation on — worth hearing back to back with Karnail Rana’s."
+    },
+    {
+      "id": "RIzv-Ar0gt8",
+      "title": "Pahadan Diye Raniye",
+      "artist": "Aman Bharmouri",
+      "duration": 522,
+      "dialect": "Gaddi",
+      "region": "Bharmour, Chamba",
+      "occasion": "Bhajan",
+      "glossary": [
+        {
+          "word": "पहाड़ां दिये राणिये",
+          "roman": "pahadan diye raniye",
+          "meaning": "queen of the mountains — the goddess"
+        }
+      ]
+    },
+    {
+      "id": "QiGtz8k-2jE",
+      "title": "Yashoda Tera Kanheya",
+      "artist": "Poonam Bhardwaj",
+      "duration": 328,
+      "dialect": "Pahari",
+      "region": "Chamba",
+      "occasion": "Bhajan"
+    },
+    {
+      "id": "XRcwNvzJXi4",
+      "title": "Main Jab Bhi Pukaru Maa",
+      "artist": "Mahakali Musical Group",
+      "duration": 355,
+      "dialect": "Hindi / Pahari",
+      "occasion": "Bhajan"
+    },
+    {
+      "id": "8qavbOUSm6o",
+      "title": "Poudiyan Chad Gya Dati Ji",
+      "artist": "Himachali Arvind",
+      "duration": 237,
+      "dialect": "Kangri",
+      "region": "Kangra",
+      "occasion": "Mata bhajan"
+    },
+    {
+      "id": "5q7wgl0GcJI",
+      "title": "Hoya Supna",
+      "artist": "Kumar Bakshi",
+      "duration": 346,
+      "dialect": "Dogri / Pahari",
+      "occasion": "Chandi Mata bhajan"
+    },
+    {
+      "id": "RtC4zLlIv34",
+      "title": "Bhagta Ander Jot Jagdi",
+      "artist": "Himachali Munda",
+      "duration": 351,
+      "dialect": "Kangri",
+      "occasion": "Navratri bhajan",
+      "note": "Navratri is when this repertoire is most alive — jagratas run through the night and the same songs are sung until dawn."
+    },
+    {
+      "id": "DNRrzXyINzc",
+      "title": "Fulan Di Kyariyan Ch Rendi Meri Maa",
+      "artist": "Himachali Munda",
+      "duration": 261,
+      "dialect": "Kangri",
+      "occasion": "Mata bhajan"
+    },
+    {
+      "id": "4qlsGim5J1E",
+      "title": "Maa Mandir Tera Badi Door",
+      "artist": "Mahakali Musical Group",
+      "duration": 330,
+      "dialect": "Hindi / Pahari",
+      "occasion": "Bhajan"
+    }
+  ]
+}

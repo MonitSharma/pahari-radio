@@ -1,0 +1,135 @@
+{
+  "slug": "kangri",
+  "name": "कांगड़ी लोक",
+  "roman": "Kangri Lok",
+  "tagline": "Lower Himachal. Karnail Rana and the Kangra valley.",
+  "epoch": 1704067980000,
+  "tracks": [
+    {
+      "id": "BnhX8TUhMyY",
+      "title": "Saile Simble Ni Maaye",
+      "artist": "Karnail Rana",
+      "duration": 401,
+      "dialect": "Kangri",
+      "region": "Kangra valley",
+      "note": "Karnail Rana has recorded well over a thousand songs across some 250 albums and is the reason Kangri folk kept a mass audience through the cassette and CD eras. He is widely called the Lok Ratna of Himachal."
+    },
+    {
+      "id": "N2EtWJWSFnA",
+      "title": "Adhi Raati Kuku Bolda",
+      "artist": "Karnail Rana",
+      "duration": 282,
+      "dialect": "Kangri",
+      "region": "Kangra valley",
+      "note": "The cuckoo calling at midnight is one of the oldest images in Pahari song — a bird heard but not seen, standing in for someone absent.",
+      "glossary": [
+        {
+          "word": "कुकू",
+          "roman": "kuku",
+          "meaning": "the cuckoo, whose call marks spring and, in song, longing"
+        }
+      ]
+    },
+    {
+      "id": "OETPvTSGuLI",
+      "title": "Putt Thakuran De",
+      "artist": "Karnail Rana",
+      "duration": 274,
+      "dialect": "Kangri",
+      "region": "Kangra valley"
+    },
+    {
+      "id": "ty4qlOY9tLk",
+      "title": "Ratno Ni Sun Ratno",
+      "artist": "Karnail Rana",
+      "duration": 271,
+      "dialect": "Kangri",
+      "region": "Kangra valley"
+    },
+    {
+      "id": "3tixelwSGZw",
+      "title": "Mandran Ch Hove Meri Maa",
+      "artist": "Karnail Rana",
+      "duration": 264,
+      "dialect": "Kangri",
+      "region": "Kangra valley",
+      "occasion": "Devotional",
+      "note": "Kangra’s folk and devotional repertoires are not cleanly separable — the same singers, the same melodies, and often the same fairs."
+    },
+    {
+      "id": "2qzKVK2foXM",
+      "title": "Chite Ne Rolti Jawani",
+      "artist": "Karnail Rana",
+      "duration": 384,
+      "dialect": "Kangri",
+      "region": "Kangra valley"
+    },
+    {
+      "id": "5_PUVPTjMmE",
+      "title": "Badeyan Gharan Di Goriye",
+      "artist": "Karnail Rana & Rajni Bhatia",
+      "duration": 346,
+      "dialect": "Kangri",
+      "region": "Kangra valley",
+      "glossary": [
+        {
+          "word": "गोरिये",
+          "roman": "goriye",
+          "meaning": "fair one — a common way of addressing a woman in song"
+        }
+      ]
+    },
+    {
+      "id": "S7EZ7S65XDo",
+      "title": "Hansi Hansi Poochdi Wo Rani Rukmani",
+      "artist": "Karnail Rana",
+      "duration": 454,
+      "dialect": "Kangri",
+      "region": "Kangra valley",
+      "occasion": "Narrative song",
+      "note": "A narrative song built on the Rukmini story. Long-form storytelling like this is the older layer of the repertoire, from before songs were cut to a three-minute length."
+    },
+    {
+      "id": "XTh_drXsoRQ",
+      "title": "Gharan Diyan Biyan",
+      "artist": "Karnail Rana",
+      "duration": 460,
+      "dialect": "Kangri",
+      "region": "Kangra valley",
+      "occasion": "Wedding"
+    },
+    {
+      "id": "SqlKhK5Fx1c",
+      "title": "Kangri Mashup",
+      "artist": "Karnail Rana",
+      "duration": 284,
+      "dialect": "Kangri",
+      "region": "Kangra valley",
+      "note": "A run through several Kangri melodies in one take — a useful thing to hear early, because it shows how much of the repertoire shares a common backbone."
+    },
+    {
+      "id": "dU8tZG6RQSU",
+      "title": "Jaliye Buni Liya Jaal",
+      "artist": "TrioMusic Kangra",
+      "duration": 456,
+      "dialect": "Kangri",
+      "region": "Kangra valley"
+    },
+    {
+      "id": "GCg1sViClYw",
+      "title": "Zindagi Sohni Aee",
+      "artist": "Bishan Dass",
+      "duration": 385,
+      "dialect": "Dogri / Kangri",
+      "region": "Lower Himachal",
+      "note": "Kangri shades into Dogri as you move west towards Jammu, and singers on that border move between the two without much ceremony.",
+      "glossary": [
+        {
+          "word": "ढोला",
+          "roman": "dhola",
+          "meaning": "beloved — the standard term of endearment in Kangri and Gaddi song"
+        }
+      ]
+    }
+  ]
+}

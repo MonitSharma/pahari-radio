@@ -1,0 +1,169 @@
+{
+  "slug": "kullvi",
+  "name": "कुल्लवी",
+  "roman": "Kullvi",
+  "tagline": "Kullu valley. Slower, older, sung in Kullvi.",
+  "epoch": 1704067620000,
+  "tracks": [
+    {
+      "id": "rbCJz2WFKCw",
+      "title": "Balh Ri Kanak",
+      "artist": "Inderjeet",
+      "duration": 355,
+      "dialect": "Kullvi",
+      "region": "Kullu / Balh valley, Mandi",
+      "occasion": "Traditional nati",
+      "note": "Named for the wheat of the Balh valley — the flat, fertile stretch below Mandi that is unusual enough in a vertical landscape to have become shorthand for plenty.",
+      "glossary": [
+        {
+          "word": "बाल्ह",
+          "roman": "Balh",
+          "meaning": "the broad valley floor south of Mandi"
+        },
+        {
+          "word": "कणक",
+          "roman": "kanak",
+          "meaning": "wheat"
+        },
+        {
+          "word": "नाटी",
+          "roman": "nati",
+          "meaning": "Himachal's circular group dance, and the songs written for it"
+        }
+      ]
+    },
+    {
+      "id": "Sx1F2sWKYlo",
+      "title": "Indru Indra",
+      "artist": "Inderjeet & Charu Sharma",
+      "duration": 252,
+      "dialect": "Kullvi",
+      "region": "Kullu",
+      "note": "Inderjeet and Charu Sharma record as a pair often enough that the two-voice texture has become part of the modern Kullvi sound."
+    },
+    {
+      "id": "AstnhOMWDoo",
+      "title": "Ladi Shaauni 3",
+      "artist": "Inderjeet ft. Sapna Chauhan",
+      "duration": 360,
+      "dialect": "Kullvi",
+      "region": "Kullu",
+      "occasion": "Wedding",
+      "note": "The third instalment of Inderjeet’s best-known song — sequels are a real and unembarrassed genre here, released whenever the first one refuses to die at weddings.",
+      "glossary": [
+        {
+          "word": "लाड़ी",
+          "roman": "ladi",
+          "meaning": "bride"
+        }
+      ]
+    },
+    {
+      "id": "oU1wodcNRrM",
+      "title": "Pakhli Manu",
+      "artist": "Inderjeet & Kajal Sharma",
+      "duration": 258,
+      "dialect": "Kullvi",
+      "region": "Kullu"
+    },
+    {
+      "id": "oo9NrSAnmq0",
+      "title": "Meera",
+      "artist": "Inderjeet & Charu Sharma",
+      "duration": 378,
+      "dialect": "Kullvi",
+      "region": "Kullu"
+    },
+    {
+      "id": "LjAuTnzAQrc",
+      "title": "Udi Udi Ja",
+      "artist": "Inderjeet & Charu Sharma",
+      "duration": 421,
+      "dialect": "Kullvi",
+      "region": "Kullu"
+    },
+    {
+      "id": "ptdSE_qo4XA",
+      "title": "Tharah Kardu",
+      "artist": "Inderjeet",
+      "duration": 502,
+      "dialect": "Kullvi",
+      "region": "Kullu",
+      "occasion": "Traditional"
+    },
+    {
+      "id": "q_j1v1jMFTQ",
+      "title": "Mhare Bishuye Jana",
+      "artist": "Inderjeet & Surender Negi",
+      "duration": 511,
+      "dialect": "Kullvi",
+      "region": "Kullu"
+    },
+    {
+      "id": "X6LLJTEPhcI",
+      "title": "Solma",
+      "artist": "Inderjeet & Charu Sharma",
+      "duration": 343,
+      "dialect": "Kullvi",
+      "region": "Kullu"
+    },
+    {
+      "id": "2IURNO88fjk",
+      "title": "Lumbru",
+      "artist": "Inderjeet",
+      "duration": 473,
+      "dialect": "Kullvi",
+      "region": "Kullu"
+    },
+    {
+      "id": "qO9ctw5yF9I",
+      "title": "Himachali Tappe",
+      "artist": "Inderjeet & Charu Sharma ft. Promila Thakur",
+      "duration": 324,
+      "dialect": "Kullvi",
+      "region": "Kullu",
+      "occasion": "Tappe",
+      "note": "Tappe are short paired couplets, traded back and forth — closer to competitive banter than to a composed song, and the form where a singer’s wit matters more than their range.",
+      "glossary": [
+        {
+          "word": "टप्पे",
+          "roman": "tappe",
+          "meaning": "short rhyming couplets sung in alternation"
+        }
+      ]
+    },
+    {
+      "id": "jAArMoY2ico",
+      "title": "Maharaz",
+      "artist": "Inder Jeet",
+      "duration": 614,
+      "dialect": "Kullvi",
+      "region": "Kullu",
+      "occasion": "Traditional nati"
+    },
+    {
+      "id": "TDhgqYvxHxI",
+      "title": "Bangdiyan",
+      "artist": "Sunil Mastie & Sheetal Arora",
+      "duration": 305,
+      "dialect": "Kullvi",
+      "region": "Kullu",
+      "glossary": [
+        {
+          "word": "बंगड़ियां",
+          "roman": "bangdiyan",
+          "meaning": "bangles"
+        }
+      ]
+    },
+    {
+      "id": "gNmK2uzC4_4",
+      "title": "Kullu Valley Folk Vibes",
+      "artist": "AarushBeats",
+      "duration": 262,
+      "dialect": "Kullvi",
+      "region": "Kullu",
+      "occasion": "Instrumental / fusion"
+    }
+  ]
+}

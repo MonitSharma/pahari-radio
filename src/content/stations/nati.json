@@ -1,0 +1,275 @@
+{
+  "slug": "nati",
+  "name": "नाटी घर",
+  "roman": "Nati Ghar",
+  "tagline": "The dance floor. Shimla-belt nati, loud and modern.",
+  "epoch": 1704067200000,
+  "tracks": [
+    {
+      "id": "iEaxxfS_5SA",
+      "title": "Rohru Jana Meri Amiye",
+      "artist": "Kuldeep Sharma",
+      "duration": 163,
+      "dialect": "Mahasuvi",
+      "region": "Rohru, Shimla district",
+      "occasion": "Nati",
+      "note": "Kuldeep Sharma is called the Nati King, and this is the register he made his own: a plain conversational line — a child telling their mother they are off to Rohru — carried on a beat built for a circle of dancers rather than a stage.",
+      "glossary": [
+        {
+          "word": "अमिये",
+          "roman": "amiye",
+          "meaning": "mother, in the dialect of upper Shimla"
+        },
+        {
+          "word": "रोहड़ू",
+          "roman": "Rohru",
+          "meaning": "a town on the Pabbar river in Shimla district"
+        },
+        {
+          "word": "नाटी",
+          "roman": "nati",
+          "meaning": "Himachal's circular group dance, and the songs written for it"
+        }
+      ]
+    },
+    {
+      "id": "DjuLD6ogH7I",
+      "title": "O Nilima",
+      "artist": "Kuldeep Sharma",
+      "duration": 221,
+      "dialect": "Mahasuvi",
+      "region": "Shimla hills",
+      "occasion": "Nati",
+      "note": "One of the songs that carried Himachali folk out of the fairground and onto cassette. Naming a woman in the title and repeating it as a hook is a Kuldeep Sharma signature — several of his best-known natis are built exactly this way.",
+      "glossary": [
+        {
+          "word": "नाटी",
+          "roman": "nati",
+          "meaning": "Himachal's circular group dance, and the songs written for it"
+        }
+      ]
+    },
+    {
+      "id": "-D71HfgY9To",
+      "title": "Rumatiye",
+      "artist": "Kuldeep Sharma",
+      "duration": 174,
+      "dialect": "Mahasuvi",
+      "region": "Shimla hills",
+      "occasion": "Nati",
+      "note": "Later-period Kuldeep Sharma, with studio production layered over the traditional nati step. The tempo still resolves to the same slow-fast dance cycle a nati circle expects.",
+      "glossary": [
+        {
+          "word": "नाटी",
+          "roman": "nati",
+          "meaning": "Himachal's circular group dance, and the songs written for it"
+        }
+      ]
+    },
+    {
+      "id": "jmNg0LkQazI",
+      "title": "Meri Jani Ra Basera",
+      "artist": "Kuldeep Sharma",
+      "duration": 319,
+      "dialect": "Mahasuvi",
+      "region": "Shimla hills",
+      "occasion": "Nati"
+    },
+    {
+      "id": "YZmwJtM_AmA",
+      "title": "MG Hector Car Beeniya",
+      "artist": "Kuldeep Sharma",
+      "duration": 249,
+      "dialect": "Mahasuvi",
+      "region": "Shimla hills",
+      "occasion": "Wedding nati",
+      "note": "A good example of how alive this tradition is: the wedding song has always catalogued what the groom brings, so a current SUV model simply takes the place a horse or a jeep held in earlier versions.",
+      "glossary": [
+        {
+          "word": "बीणिये",
+          "roman": "beeniya",
+          "meaning": "bride"
+        }
+      ]
+    },
+    {
+      "id": "PjaID-Grui4",
+      "title": "Meta Mahare Kishori Lala",
+      "artist": "KL Singta",
+      "duration": 334,
+      "dialect": "Pahari (Shimla belt)",
+      "region": "Shimla district",
+      "occasion": "Nati",
+      "note": "KL Singta records prolifically for the Shimla nati circuit, where a song’s life is measured in how many fairs it survives rather than in chart positions.",
+      "glossary": [
+        {
+          "word": "नाटी",
+          "roman": "nati",
+          "meaning": "Himachal's circular group dance, and the songs written for it"
+        }
+      ]
+    },
+    {
+      "id": "UICQHNna-as",
+      "title": "Babua Jai Rama",
+      "artist": "KL Singta",
+      "duration": 250,
+      "dialect": "Pahari (Shimla belt)",
+      "region": "Shimla district",
+      "occasion": "Traditional nati",
+      "note": "Marked as traditional rather than newly written — the melody predates the recording, which is common in this repertoire.",
+      "glossary": [
+        {
+          "word": "नाटी",
+          "roman": "nati",
+          "meaning": "Himachal's circular group dance, and the songs written for it"
+        }
+      ]
+    },
+    {
+      "id": "wdDFEfcTdfA",
+      "title": "Hy Payari Sapna",
+      "artist": "KL Singta",
+      "duration": 330,
+      "dialect": "Pahari (Shimla belt)",
+      "occasion": "Nati"
+    },
+    {
+      "id": "j3fFU6ixBSo",
+      "title": "Badmashi",
+      "artist": "KL Singta",
+      "duration": 189,
+      "dialect": "Pahari (Shimla belt)",
+      "occasion": "Nati"
+    },
+    {
+      "id": "dkrwXFJNWcs",
+      "title": "Ronko Bazaro Di",
+      "artist": "KL Singta ft. Divya",
+      "duration": 185,
+      "dialect": "Pahari (Shimla belt)",
+      "occasion": "Nati"
+    },
+    {
+      "id": "tBt_rGvGA3g",
+      "title": "Bawri Jhuriye",
+      "artist": "Hemraj Khachi",
+      "duration": 225,
+      "dialect": "Pahari (Shimla belt)",
+      "occasion": "Nati",
+      "glossary": [
+        {
+          "word": "झूरी",
+          "roman": "jhuri",
+          "meaning": "a young woman; in song, the one being addressed"
+        }
+      ]
+    },
+    {
+      "id": "fOI-MsoyVUg",
+      "title": "Ho Sumitra",
+      "artist": "Hemraj Khachi",
+      "duration": 301,
+      "dialect": "Pahari (Shimla belt)",
+      "occasion": "Nati"
+    },
+    {
+      "id": "X5piimKhS9M",
+      "title": "Jhumi Jhumiyo",
+      "artist": "Hemraj Khachi",
+      "duration": 214,
+      "dialect": "Pahari (Shimla belt)",
+      "occasion": "Nati"
+    },
+    {
+      "id": "-qHNpIu_zyg",
+      "title": "Sawan Re Mahine Di",
+      "artist": "Hemraj Khachi",
+      "duration": 185,
+      "dialect": "Pahari (Shimla belt)",
+      "occasion": "Monsoon song",
+      "note": "Sawan, the monsoon month, is the single most-sung season in Himachali folk — the rains, the swings hung in the trees, and the daughters who come home for them."
+    },
+    {
+      "id": "R2FmdiCn9VA",
+      "title": "LP Gadi",
+      "artist": "Vicky Chauhan & Geeta Bhardwaj",
+      "duration": 232,
+      "dialect": "Pahari (Shimla belt)",
+      "occasion": "Nati",
+      "note": "A duet in the call-and-response shape nati borrows from older fairground singing, where two singers trade verses across the circle."
+    },
+    {
+      "id": "3wQRbv-IBi0",
+      "title": "Kindi Chale Bathade",
+      "artist": "Vicky Chauhan",
+      "duration": 218,
+      "dialect": "Pahari (Shimla belt)",
+      "occasion": "Nati"
+    },
+    {
+      "id": "wktAkRii0wM",
+      "title": "Kosi Ri Boniyo Ji",
+      "artist": "Vicky Chauhan",
+      "duration": 239,
+      "dialect": "Pahari (Shimla belt)",
+      "occasion": "Nati"
+    },
+    {
+      "id": "PM53n-eFW2Q",
+      "title": "Jhumke Jhumke",
+      "artist": "Vicky Chauhan",
+      "duration": 306,
+      "dialect": "Pahari (Shimla belt)",
+      "occasion": "Nati"
+    },
+    {
+      "id": "JG3KXJYvNGM",
+      "title": "Cham Chamande Ho",
+      "artist": "Vicky Chauhan",
+      "duration": 315,
+      "dialect": "Pahari (Shimla belt)",
+      "occasion": "Nati"
+    },
+    {
+      "id": "4jDHBaWutqQ",
+      "title": "Whisky Whisky",
+      "artist": "Vicky Chauhan & Rajeev Negi",
+      "duration": 253,
+      "dialect": "Pahari (Shimla belt)",
+      "occasion": "DJ nati",
+      "note": "The contemporary end of the scene, where nati is produced for sound systems at weddings. The step underneath is unchanged; the drums are not."
+    },
+    {
+      "id": "00lfigkK4w0",
+      "title": "Suno Mem Saheb Ji",
+      "artist": "Vicky Chauhan",
+      "duration": 227,
+      "dialect": "Pahari (Shimla belt)",
+      "occasion": "DJ nati"
+    },
+    {
+      "id": "D1TLPtdfH3s",
+      "title": "Naati Ra Dhamaka",
+      "artist": "Ishant Bhardwaj",
+      "duration": 244,
+      "dialect": "Pahari (Shimla belt)",
+      "occasion": "DJ nati",
+      "glossary": [
+        {
+          "word": "नाटी",
+          "roman": "nati",
+          "meaning": "Himachal's circular group dance, and the songs written for it"
+        }
+      ]
+    },
+    {
+      "id": "DY-sLVAZDcM",
+      "title": "Kudmanua",
+      "artist": "Ishant Bhardwaj",
+      "duration": 397,
+      "dialect": "Pahari (Shimla belt)",
+      "occasion": "DJ nati"
+    }
+  ]
+}
