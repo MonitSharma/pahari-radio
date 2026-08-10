@@ -8,7 +8,10 @@
  * the station would just go quiet for the length of that track with no error.
  * So anything not embeddable is dropped here, loudly, at build time.
  *
- * No API key: the watch page is public. Be polite about rate — this runs rarely.
+ * YouTube sometimes bot-blocks the normal watch-page request in CI. In that
+ * case we fall back to YouTube's public oEmbed/player metadata endpoints. The
+ * oEmbed response is only used as evidence that the public embed exists; the
+ * actual player remains responsible for reporting a runtime playback error.
  *
  *   npm run build:stations          verify + write
  *   npm run build:stations -- --check   verify only, non-zero exit on problems
@@ -31,6 +34,7 @@ const MIN_DURATION_SEC = 60
 
 const UA =
   'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122 Safari/537.36'
+const INNERTUBE_KEY = 'AIzaSyAO_FJ2SlqUQ8Q4STEHLGCilw_Y'
 
 interface Probe {
   id: string
@@ -69,6 +73,8 @@ async function probe(id: string): Promise<Probe | { id: string; error: string }>
 
   if (!title || !length) {
     const unavailable = /"status":"(UNPLAYABLE|LOGIN_REQUIRED|ERROR)"/.exec(html)?.[1]
+    const fallback = await probePublicMetadata(id)
+    if (fallback) return fallback
     return { id, error: unavailable ? `unavailable (${unavailable})` : 'could not parse watch page' }
   }
 
@@ -78,6 +84,45 @@ async function probe(id: string): Promise<Probe | { id: string; error: string }>
     author: decodeJsonString(author ?? 'Unknown'),
     duration: Number(length),
     playableInEmbed: embeddable === 'true',
+  }
+}
+
+async function probePublicMetadata(id: string): Promise<Probe | null> {
+  try {
+    const oembedRes = await fetch(
+      `https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D${id}&format=json`,
+      { headers: { 'User-Agent': UA } },
+    )
+    if (!oembedRes.ok) return null
+    const oembed = (await oembedRes.json()) as { title?: string; author_name?: string }
+    if (!oembed.title) return null
+
+    const playerRes = await fetch(`https://www.youtube.com/youtubei/v1/player?key=${INNERTUBE_KEY}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'User-Agent': UA },
+      body: JSON.stringify({
+        videoId: id,
+        context: { client: { clientName: 'WEB', clientVersion: '2.20240101.00.00' } },
+      }),
+    })
+    if (!playerRes.ok) return null
+    const player = (await playerRes.json()) as {
+      videoDetails?: { title?: string; author?: string; lengthSeconds?: string }
+    }
+    const duration = Number(player.videoDetails?.lengthSeconds)
+    if (!Number.isFinite(duration) || duration <= 0) return null
+
+    return {
+      id,
+      title: player.videoDetails?.title ?? oembed.title,
+      author: player.videoDetails?.author ?? oembed.author_name ?? 'Unknown',
+      duration,
+      // oEmbed is public only when YouTube can generate an embeddable preview.
+      // The IFrame player still has the final say at runtime.
+      playableInEmbed: true,
+    }
+  } catch {
+    return null
   }
 }
 
