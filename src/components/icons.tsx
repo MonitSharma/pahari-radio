@@ -24,6 +24,18 @@ export const IconMuted = (p: { size?: number }) => (
   </svg>
 )
 
+export const IconPause = (p: { size?: number }) => (
+  <svg {...base} width={p.size ?? 20} height={p.size ?? 20}>
+    <path d="M8 5v14M16 5v14" />
+  </svg>
+)
+
+export const IconPlay = (p: { size?: number }) => (
+  <svg {...base} width={p.size ?? 20} height={p.size ?? 20}>
+    <path d="m8 5 11 7-11 7V5Z" />
+  </svg>
+)
+
 export const IconInfo = (p: { size?: number }) => (
   <svg {...base} width={p.size ?? 20} height={p.size ?? 20}>
     <circle cx="12" cy="12" r="9" />

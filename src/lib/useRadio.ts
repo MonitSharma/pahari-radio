@@ -45,6 +45,9 @@ export interface Radio {
   tuneIn: () => void
   /** The player is loaded and actually producing sound. */
   playing: boolean
+  /** Local listening pause; resuming jumps back to the current live moment. */
+  paused: boolean
+  togglePaused: () => void
   /** Set when the current track won't play — pulled, or newly embed-blocked. */
   unavailable: boolean
   /** Seconds the player is ahead (+) or behind (-) the schedule. Diagnostics. */
@@ -61,6 +64,7 @@ export function useRadio(station: Station): Radio {
   const [tick, setTick] = useState(() => now())
   const [tunedIn, setTunedIn] = useState(false)
   const [playing, setPlaying] = useState(false)
+  const [paused, setPaused] = useState(false)
   const [unavailable, setUnavailable] = useState(false)
   const [drift, setDrift] = useState(0)
   const [volume, setVolumeState] = useState(80)
@@ -70,6 +74,8 @@ export function useRadio(station: Station): Radio {
   const playerRef = useRef<any>(null)
   const loadedIdRef = useRef<string | null>(null)
   const settleUntilRef = useRef(0)
+  const pausedRef = useRef(false)
+  pausedRef.current = paused
 
   // The clock. Everything visual reads off this.
   useEffect(() => {
@@ -113,9 +119,13 @@ export function useRadio(station: Station): Radio {
             loadedIdRef.current = current?.track.id ?? null
             settleUntilRef.current = Date.now() + SETTLE_MS
             e.target.setVolume(volume)
-            e.target.playVideo()
+            if (!pausedRef.current) e.target.playVideo()
           },
           onStateChange: (e: any) => {
+            if (pausedRef.current) {
+              setPlaying(false)
+              return
+            }
             // 1 PLAYING, 3 BUFFERING — both mean the track is viable.
             if (e.data === 1) {
               setPlaying(true)
@@ -143,7 +153,7 @@ export function useRadio(station: Station): Radio {
 
   // --- Keep the player pinned to the schedule. ----------------------------
   useEffect(() => {
-    if (!tunedIn || !res) return
+    if (!tunedIn || !res || paused) return
     const player = playerRef.current
     if (!player?.loadVideoById) return
 
@@ -174,7 +184,7 @@ export function useRadio(station: Station): Radio {
       settleUntilRef.current = Date.now() + SETTLE_MS
       player.seekTo(res.offsetSec, true)
     }
-  }, [tick, tunedIn, res])
+  }, [tick, tunedIn, paused, res])
 
   // Switching station should cut over immediately rather than waiting for the
   // next tick, so the tap feels instant.
@@ -198,11 +208,30 @@ export function useRadio(station: Station): Radio {
 
   const toggleMuted = useCallback(() => setMuted((m) => !m), [])
 
+  const togglePaused = useCallback(() => setPaused((current) => !current), [])
+
+  useEffect(() => {
+    const player = playerRef.current
+    if (!player) return
+
+    if (paused) {
+      player.pauseVideo?.()
+      setPlaying(false)
+      return
+    }
+
+    // Force the scheduler to load the current live position on the next tick.
+    loadedIdRef.current = null
+    setUnavailable(false)
+  }, [paused])
+
   return {
     res,
     tunedIn,
     tuneIn,
     playing,
+    paused,
+    togglePaused,
     unavailable,
     drift,
     volume,

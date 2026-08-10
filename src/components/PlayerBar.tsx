@@ -1,13 +1,16 @@
 import { formatTime, type Resolution } from '../lib/scheduler'
 import type { Station } from '../lib/types'
 import { assetUrl } from '../lib/assets'
-import { Equaliser, IconInfo, IconMuted, IconSpeaker } from './icons'
+import { Equaliser, IconInfo, IconMuted, IconPause, IconPlay, IconSpeaker } from './icons'
 
 export function PlayerBar({
   res,
   station,
   accent,
+  tunedIn,
   playing,
+  paused,
+  togglePaused,
   unavailable,
   muted,
   toggleMuted,
@@ -19,7 +22,10 @@ export function PlayerBar({
   res: Resolution
   station: Station
   accent: string
+  tunedIn: boolean
   playing: boolean
+  paused: boolean
+  togglePaused: () => void
   unavailable: boolean
   muted: boolean
   toggleMuted: () => void
@@ -78,6 +84,16 @@ export function PlayerBar({
         </div>
 
         <div className="flex shrink-0 items-center gap-1">
+          {tunedIn && (
+            <button
+              onClick={togglePaused}
+              aria-label={paused ? 'Resume live' : 'Pause'}
+              title={paused ? 'Resume live' : 'Pause'}
+              className="rounded-full p-2 text-white/70 transition hover:bg-white/10 hover:text-white"
+            >
+              {paused ? <IconPlay /> : <IconPause />}
+            </button>
+          )}
           <div className="group relative flex items-center">
             <button
               onClick={toggleMuted}
@@ -129,7 +145,11 @@ export function PlayerBar({
         <span>
           {station.name} · ट्रैक {slot + 1}/{station.tracks.length}
         </span>
-        {unavailable ? (
+        {paused ? (
+          <span role="status" aria-live="polite" className="text-white/65">
+            रुका हुआ · Paused · resume live to listen now
+          </span>
+        ) : unavailable ? (
           <span role="status" aria-live="polite" className="text-amber-300/90">
             यह वीडियो उपलब्ध नहीं · Video unavailable · next in {formatTime(res.remainingSec)}
           </span>

@@ -105,7 +105,10 @@ export default function App() {
             res={res}
             station={station}
             accent={palette.accent}
+            tunedIn={radio.tunedIn}
             playing={radio.playing}
+            paused={radio.paused}
+            togglePaused={radio.togglePaused}
             unavailable={radio.unavailable}
             muted={radio.muted}
             toggleMuted={radio.toggleMuted}
