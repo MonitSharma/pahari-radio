@@ -75,6 +75,53 @@ button {
   animation: rise 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
 
+/* AnimatedScene: the background stays lightweight because all motion is CSS. */
+@keyframes drift {
+  from { transform: translate3d(-12%, 0, 0); }
+  to { transform: translate3d(12%, 0, 0); }
+}
+
+@keyframes driftBack {
+  from { transform: translate3d(10%, 0, 0); }
+  to { transform: translate3d(-10%, 0, 0); }
+}
+
+@keyframes sway {
+  0%, 100% { transform: rotate(-1.1deg); }
+  50% { transform: rotate(1.1deg); }
+}
+
+@keyframes flagWave {
+  0%, 100% { transform: skewY(4deg) scaleY(0.94); }
+  50% { transform: skewY(-5deg) scaleY(1.06); }
+}
+
+@keyframes lamp {
+  0%, 100% { opacity: 0.78; }
+  43% { opacity: 1; }
+  61% { opacity: 0.62; }
+}
+
+@keyframes smoke {
+  0% { opacity: 0; transform: translate(0, 0) scale(0.6); }
+  20% { opacity: 0.5; }
+  100% { opacity: 0; transform: translate(26px, -120px) scale(2.6); }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.9; }
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.35); opacity: 0.05; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scene-anim * { animation: none !important; }
+}
+
 /* Equaliser bars in the now-playing card. */
 @keyframes bar {
   0%,

@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
-import { Scene } from './components/scenes/Scene'
+import { AnimatedScene } from './components/scenes/AnimatedScene'
 import { TopBar } from './components/TopBar'
 import { PlayerBar } from './components/PlayerBar'
 import { SongSheet } from './components/SongSheet'
@@ -59,7 +59,7 @@ export default function App() {
   return (
     <div className="relative flex h-full flex-col overflow-hidden">
       <div className="fixed inset-0 -z-10">
-        <Scene slug={station.slug} palette={palette} />
+        <AnimatedScene slug={station.slug} palette={palette} />
         {/* Darken top and bottom so text stays readable over any part of the art. */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-transparent to-black/80" />
       </div>
@@ -88,7 +88,7 @@ export default function App() {
             className="rise mt-8 rounded-full px-8 py-3.5 text-lg font-medium text-black shadow-xl transition hover:brightness-110 active:scale-[0.98]"
             style={{ background: palette.accent }}
           >
-            सुनो · Tune in
+            सुनें · Tune in
           </button>
         )}
 
