@@ -43,6 +43,64 @@ const DEVTA = g('देवता', 'devta', 'the village deity, carried in a pal
 const JATAR = g('जातर', 'jatar', 'a village fair held in a deity’s honour')
 const DHOLA = g('ढोला', 'dhola', 'beloved — the standard term of endearment in Kangri and Gaddi song')
 
+const withEditorial = (ids: string[], editorial: Pick<SeedTrack, 'dialect' | 'region' | 'occasion'>): SeedTrack[] =>
+  ids.map((id) => ({ id, ...editorial }))
+
+// Additional candidates are intentionally kept as IDs only. The build step
+// fetches the current YouTube title, artist, duration and embed availability,
+// dropping anything that has gone bad before it reaches the station JSON.
+const EXTRA_NATI = [
+  'r7r8TMybbwg', '_QnHG60GNoU', 'oifWpw-oroE', 'UVTTgDrXB1Y', '8Ge5uj504Cg',
+  'y73vyGmM7bY', 'MtSU4xaPmgw', '6vt_0YAEga0', '2--qQmnmDEQ', 'QhUkAtTaBCs',
+  'siQFihyg50s', 'LWzeZHJR-i0', 'GZ8jlAdNOQI', 'AI4Sh9S5b6w', 'aK9Ud1q25nQ',
+  'uEddXNIPYF0', '_0wisk0pZVo', 'r30wDNC-7sM', 'scZCP9PKmO4', 'K-e982ytZMQ',
+  '0lm5W04Gnfg', 'lQrAz87f7nA', 'yKW9Ir4eX8I', 'I-4LiPfwTHo', 'E7jWCt7l6Fo',
+  'Euy8pDRDUew', 'tyKySIdI2xg', 'OXpk6DrkMnU', 'SXcHRWgA9tI', 'zdtZEPLdPfU',
+  'uV_O3kCozq4', 'DaWU5C1ncSo', 'dOheZ_dt0bk',
+]
+
+const EXTRA_KULLVI = [
+  'raori1xBCJ0', 'yNzLXjwiDQ4', 'J-1EgMWHFL4', 'FmWLV2wDdhU', '3HsJBC5Yq5I',
+  'I8mPjB9gKVo', 'fdfFnw8wlew', 'idlCWwvhM5I', 'h4OlgzjxNaY', 'Mete1QL4EQc',
+  'HfS7xRM61gk', 'jsOuIs_qM4k', 'PPHSoHYdNi0', 'swQIJKFD2Ao', '1CI1Cu2Hr5M',
+  'j6UDXC9hMUY', '0atfoP-Swsw', 'PVQBWoV0dRQ', 'Sb9VxIQ0ki4', '9HsAoM_aVHw',
+  'A8mZmCzfms4', 'RQJT4aiCJx8', 'aZ6_-0AGpzI', '78ASaO5LPww', 'Go4NQpaLGJI',
+  '7Pnx-GwbJ-4', 'pPXFn3HH7fU', '2Oxu3bCRwIY', 'hWU8QiXpHps', 'f57WasySB_g',
+  'UJWxgFSWxCs', 'gictpIaaZtY', 'jFwYjn1v3ys', '2QqNiQ73Gjs', '614vmA9kIhI',
+  'Ma_ocSuk8yI',
+]
+
+const EXTRA_KANGRI = [
+  'gdPogbxT4os', 'rbpDXS3HvX4', 'bntfCwt8q1U', 'pCVilTaUKVk', 'JAZ5-RIFVUc',
+  'NEcPATE9hvs', 'h3a65rAUkC4', 'vX6V-ryFhsI', '9vCcPdCiLVI', 'Bes9x4ZaqJA',
+  'ONA7U8HmC3g', 'NwbfxLZko9c', '-3RvBMMUS6c', 'uJh7JLRMlBk', 's0LVR37iZrQ',
+  'Nsy3U7Au5_E', 'vhYF8O0serY', 'eULJHcTcaMU', 'SPSwGJ81los', '5oroSuXHGbY',
+  'P0xeMFCvz_w', '5a-9Jn6KiGY', 'b-u9qaYQ_Iw', 'tNIN5guTUok', '9LyK8377bT4',
+  '3u_cS7oqyxA', '_FS3lxs_y3s', '_brCwNoFqBk', 'vZgkTrC0fKE', 'SSHcheV4R3o',
+  'sT3vXeklTfI',
+]
+
+const EXTRA_CHAMBA = [
+  'b3YVacONARY', 'GkhrOnaLFVY', 'V0tLmW9T1pc', 'LgdzqTrXxVg', 'SKqkrPdRW5U',
+  'vY4PCOYdM5o', 'cl7B4jixnVo', 'vY0CKn9bCec', 'JRaWIbOMtPI', 'DXEjdHtJTEk',
+  'Mcp8i2-Cu_c', '4JPZTuj8jNs', 'U63gXpzSzsE', 'nOPbesX1YH0', 'RTUcctTvYgE',
+  'GtV99EUKMLM', 'LISP3lNQYSU', '0MoaiU4KXac', '_Nrdl7qdGnA', '27yGHM5TwNI',
+  's1Ht1RWxiyA', 'Ia1wdTzdEzU', 'fXQiNDeRd74', 'DvJV7e1EMq0', 'QglvhFrcjSA',
+  '7T2i73X2_Ns', 'SAiNsfeWVbI', 'YSGrr5HIT6c', 'MAGuo3gsNlI', 'iosspmqOUYI',
+  '8BFP01yfatQ', 'EYXtNRYIjr0', 'KX4DcsnBxYI',
+]
+
+const EXTRA_DEVBHOOMI = [
+  'BmD0GYKXaTc', '9uT4M05Hckc', 'X5CEJAT8vOc', 'Ol_iAYD5ATs', 'j_zda_xdkiQ',
+  'P2L7tqe6CYQ', 'y_oTUZER90o', '8jNkP3JUF0M', 'KTAgI5YrE24', 'O9HKhcjSodQ',
+  'CsF-w3MUeuQ', 'm-pflPUS16I', 'TDtMkyZu8S8', 'qtMhWck5o3k', 'I8rey2YgGyc',
+  'x015EEnOApE', 'LuIeBLPfrwI', 'YwF20zhUPgA', 'GH1sqvKwCT4', 'hFZ7leT1MIk',
+  't1t8jJlBCzQ', 'hq9mii5xbhk', 'h7GUR-9V5CA', 'ZGAxvYPt-CU', 'lXQe7uOVXzU',
+  'uYUUf7jqM1w', 'xUB9hX0HHsE', '9Zgy9e-1PsI', '-tVOkL0FsQw', 'hxQSwuqxbSI',
+  'hg9hTfx6g5g', 'SZu8iIdunJg', 'OrEctMex2JE', 'NPlNZngvZH4', 'KqV1bbZfePA',
+  'raXm6ftA2c4',
+]
+
 export const seed: SeedStation[] = [
   // ─────────────────────────────────────────────────────────────────────────
   {
@@ -154,6 +212,7 @@ export const seed: SeedStation[] = [
       { id: '00lfigkK4w0', title: 'Suno Mem Saheb Ji', artist: 'Vicky Chauhan', dialect: 'Pahari (Shimla belt)', occasion: 'DJ nati' },
       { id: 'D1TLPtdfH3s', title: 'Naati Ra Dhamaka', artist: 'Ishant Bhardwaj', dialect: 'Pahari (Shimla belt)', occasion: 'DJ nati', glossary: [NATI] },
       { id: 'DY-sLVAZDcM', title: 'Kudmanua', artist: 'Ishant Bhardwaj', dialect: 'Pahari (Shimla belt)', occasion: 'DJ nati' },
+      ...withEditorial(EXTRA_NATI, { dialect: 'Pahari (Shimla belt)', region: 'Shimla district', occasion: 'Nati' }),
     ],
   },
 
@@ -217,6 +276,7 @@ export const seed: SeedStation[] = [
       { id: 'jAArMoY2ico', title: 'Maharaz', artist: 'Inder Jeet', dialect: 'Kullvi', region: 'Kullu', occasion: 'Traditional nati' },
       { id: 'TDhgqYvxHxI', title: 'Bangdiyan', artist: 'Sunil Mastie & Sheetal Arora', dialect: 'Kullvi', region: 'Kullu', glossary: [g('बंगड़ियां', 'bangdiyan', 'bangles')] },
       { id: 'gNmK2uzC4_4', title: 'Kullu Valley Folk Vibes', artist: 'AarushBeats', dialect: 'Kullvi', region: 'Kullu', occasion: 'Instrumental / fusion' },
+      ...withEditorial(EXTRA_KULLVI, { dialect: 'Kullvi', region: 'Kullu valley', occasion: 'Folk / nati' }),
     ],
   },
 
@@ -278,6 +338,7 @@ export const seed: SeedStation[] = [
       },
       { id: 'dU8tZG6RQSU', title: 'Jaliye Buni Liya Jaal', artist: 'TrioMusic Kangra', dialect: 'Kangri', region: 'Kangra valley' },
       { id: 'GCg1sViClYw', title: 'Zindagi Sohni Aee', artist: 'Bishan Dass', dialect: 'Dogri / Kangri', region: 'Lower Himachal', note: 'Kangri shades into Dogri as you move west towards Jammu, and singers on that border move between the two without much ceremony.', glossary: [DHOLA] },
+      ...withEditorial(EXTRA_KANGRI, { dialect: 'Kangri', region: 'Kangra valley', occasion: 'Folk song' }),
     ],
   },
 
@@ -335,6 +396,7 @@ export const seed: SeedStation[] = [
         occasion: 'Shepherd song',
         note: 'Explicitly a tribute to the shepherds. The Gaddi flock routes are emptying as the younger generation leaves them, and a fair amount of recent Gaddi music is elegy whether or not it says so.',
       },
+      ...withEditorial(EXTRA_CHAMBA, { dialect: 'Gaddi / Pangwali / Chambyali', region: 'Chamba and Pangi', occasion: 'Folk song' }),
     ],
   },
 
@@ -390,6 +452,7 @@ export const seed: SeedStation[] = [
       { id: 'RtC4zLlIv34', title: 'Bhagta Ander Jot Jagdi', artist: 'Himachali Munda', dialect: 'Kangri', occasion: 'Navratri bhajan', note: 'Navratri is when this repertoire is most alive — jagratas run through the night and the same songs are sung until dawn.' },
       { id: 'DNRrzXyINzc', title: 'Fulan Di Kyariyan Ch Rendi Meri Maa', artist: 'Himachali Munda', dialect: 'Kangri', occasion: 'Mata bhajan' },
       { id: '4qlsGim5J1E', title: 'Maa Mandir Tera Badi Door', artist: 'Mahakali Musical Group', dialect: 'Hindi / Pahari', occasion: 'Bhajan' },
+      ...withEditorial(EXTRA_DEVBHOOMI, { dialect: 'Pahari / Jaunsari', region: 'Himachal and Mahasu belt', occasion: 'Devotional / harul' }),
     ],
   },
 ]

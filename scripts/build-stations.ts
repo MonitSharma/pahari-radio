@@ -170,7 +170,13 @@ async function buildStation(s: SeedStation, checkOnly: boolean) {
     tracks,
   }
 
-  if (!checkOnly) {
+  // Never replace a known-good station with an empty or partial result when
+  // YouTube rate-limits the verifier. A transient 429 is a network problem,
+  // not evidence that the station's tracks disappeared.
+  if (!checkOnly && problems.some((problem) => problem.includes('HTTP 429'))) {
+    console.error(`  ! YouTube rate-limited this station; preserving its existing JSON.`)
+    process.exitCode = 1
+  } else if (!checkOnly) {
     await writeFile(join(OUT_DIR, `${s.slug}.json`), JSON.stringify(station, null, 2) + '\n')
   }
 
