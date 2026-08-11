@@ -76,6 +76,62 @@ The script also pulls cover art into `public/covers/`, so nothing is requested f
 runtime. Re-run it occasionally: YouTube videos get pulled, and `--check` exits non-zero if any
 track has gone bad.
 
+### Add a song to a specific station
+
+1. Open the YouTube video you want to add and copy its video ID. For
+   `https://www.youtube.com/watch?v=ABC123xyz`, the ID is `ABC123xyz`.
+2. Open `scripts/seed.ts` and find the station's `entries` list. Add the song to the matching
+   station:
+
+```ts
+{
+  id: 'ABC123xyz',
+  title: 'Song name',
+  artist: 'Artist name',
+  dialect: 'Kangri',
+  region: 'Kangra valley',
+  occasion: 'Folk song',
+},
+```
+
+Use these slugs when choosing a category:
+
+| Slug | Add songs from |
+| --- | --- |
+| `nati` | Shimla-belt Nati and modern dance songs |
+| `kullvi` | Kullu valley and Kullvi folk songs |
+| `kangri` | Kangra and lower-Himachal Kangri songs |
+| `chamba` | Chamba, Gaddi, Churahi and Pangwali songs |
+| `devbhoomi` | Harul, deity songs, devotional music and Mata bhajans |
+
+`title`, `artist`, and the editorial fields are optional. A track with only an `id` still plays,
+but adding them gives the now-playing card better information. Add one video per entry rather than
+using a YouTube playlist URL.
+
+Then run the verification and production checks:
+
+```bash
+npm run build:stations
+npm test
+npm run lint
+npm run build
+```
+
+`build:stations` checks that the video is available and embeddable, rejects short clips and long
+nonstop mixes, and downloads its cover into `public/covers/`. If YouTube rejects a video, choose
+another upload instead of forcing it into the generated station data. Do not hand-edit
+`src/content/stations/*.json`; those files are generated.
+
+After the checks pass, publish the update:
+
+```bash
+git add scripts/seed.ts src/content/stations public/covers
+git commit -m "Add songs to a station"
+git push origin main
+```
+
+The GitHub Actions workflow will build and redeploy the site automatically.
+
 ## About the song notes, not lyrics
 
 The "about this song" panel carries dialect, region, occasion, a short original note, and a glossary
@@ -95,7 +151,7 @@ Editorial is optional per track. A song with none still plays; the panel just sa
 | `chamba` | चंबा–पांगी | Gaddi, Churahi and Pangwali from beyond the passes — Poonam Bhardwaj and others |
 | `devbhoomi` | देवभूमि | Harul, dev nati and the Mata bhajans |
 
-79 tracks, all verified embeddable at build time.
+236 tracks currently, with 40+ tracks in every station.
 
 ## Layout
 
